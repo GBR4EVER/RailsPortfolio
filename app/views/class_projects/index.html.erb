@@ -1,0 +1,13 @@
+<h1>Omaha Code School Projects</h1>
+
+<% @classprojects.each do |classproject| %>
+
+<!-- We could run this tag
+	<! <p><a href="<%= user_path(user.id) %>"><%= user.name %></a></p> -->
+<!-- But the link_to approach is the much more conventional 'rails way' -->
+
+<p><%= link_to(user.name, user_path(user.id)) %></p>
+
+<% end %>
+
+<%= link_to("Create new Project", new_classproject_path) %>
