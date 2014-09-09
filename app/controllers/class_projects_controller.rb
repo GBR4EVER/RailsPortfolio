@@ -14,11 +14,26 @@ class ClassProjectsController < ApplicationController
     if @class_project.save
       redirect_to class_project_path
     else
-      "ERRRRROR"
+      render "new"
+    end
+  end
+  
+  def edit
+    @existing_project = ClassProject.find(params[:id])
+  end
+  
+  def update
+    @existing_project = ClassProject.find(params[:id])
+    
+    if @existing_project.update_attributes(params[:class_project])
+      redirect_to class_project_path(@existing_project.id)
+    else
+      render "edit"
     end
   end
   
   def show
+    @class_project = ClassProject.find(params[:id])
   end
   
 end
