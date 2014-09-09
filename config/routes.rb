@@ -7,10 +7,13 @@ RailsPortfolio::Application.routes.draw do
   
   get "https://www.linkedin.com/in/coreyburkley" => 'pages#linkedin', :as => "linkedin"
   
-  get "classprojects/index" => 'class_projects#index', :as => "list"
+  get "classprojects" => 'class_projects#index', :as => "class_project"
   
-  get "classprojects/new" => 'class_projects#new', :as => "new_project"
+  get "classprojects/new" => 'class_projects#new', :as => "project_new"
   
-  post "classprojects/create" => 'class_projects#create'
+  post "classprojects" => 'class_projects#create', :as => "project_create"
+  
+  get "classprojects/:id" => 'class_projects#show', :as => "project"
+  
   
 end

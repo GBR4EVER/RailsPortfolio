@@ -3,11 +3,11 @@
 <% @class_projects.each do |classproject| %>
 
 <!-- We could run this tag
-	<! <p><a href="<%= user_path(user.id) %>"><%= user.name %></a></p> -->
+	<! <p><a href="<%#= user_path(user.id) %>"><%#= user.name %></a></p> -->
 <!-- But the link_to approach is the much more conventional 'rails way' -->
 
-<p><%= link_to(classproject.name, classproject.summary, classproject.code_language, classproject.github, classproject_path(classproject.id)) %></p>
+<p><%= link_to(classproject.name, project_path(classproject.id)) %></p>
 
 <% end %>
 
-<%= link_to("Create new Project", new_project_path) %>
+<%= link_to("Create new Project", project_new_path) %>

@@ -8,7 +8,7 @@
 
 <!-- Creates a POST request to "/users" -->
 
-<%= form_for :class_project do |f| %>
+<%= form_for @class_project, :url => "/classprojects" do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %>
 	
