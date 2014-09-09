@@ -3,5 +3,4 @@ class ClassProject < ActiveRecord::Base
   
   validates :name, :summary, :code_language, :github, :presence => true
 
-
 end

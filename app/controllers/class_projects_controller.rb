@@ -1,15 +1,21 @@
 class ClassProjectsController < ApplicationController
 
   def index
-    @classprojects = ClassProject.all
+    @class_projects = ClassProject.all
   end
   
   def new
-    @classproject = ClassProject.new
+    @class_project = ClassProject.new
   end
 
   def create
-    @classproject = ClassProject.new(params[:classprojects])
+    @class_project = ClassProject.create(params[:classproject])
+    
+    if @class_project.save
+      "Well done!"
+    else
+      "ERRRRROR"
+    end
   end
   
 end

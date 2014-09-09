@@ -9,5 +9,8 @@ RailsPortfolio::Application.routes.draw do
   
   get "classprojects/index" => 'class_projects#index', :as => "list"
   
+  get "classprojects/new" => 'class_projects#new', :as => "new_project"
+  
+  post "classprojects/create" => 'class_projects#create'
   
 end
