@@ -8,8 +8,6 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
   
-  binding.pry
-  
   def create
     @contact = Contact.new(params[:contact])
     
