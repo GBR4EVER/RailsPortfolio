@@ -1,0 +1,14 @@
+<h1>Articles</h1>
+
+<% @articles.each do |article| %>
+
+<!-- We could run this tag
+	<! <p><a href="<%#= article_list_path(contact.id) %>"><%#= article.title %></a></p> -->
+<!-- But the link_to approach is the much more conventional 'rails way' -->
+
+<p><%= link_to(article.title, article_list_path(article.id)) %></p>
+
+<% end %>
+
+<%= link_to("Create new article", contact_new_path) %>
+

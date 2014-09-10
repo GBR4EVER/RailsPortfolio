@@ -1,0 +1,24 @@
+<h1>New Article</h1>
+
+<% @article.errors.full_messages.each do |msg| %>
+
+<p><%= msg %></p>
+
+<% end %>
+
+<!-- Creates a POST request to "/contacts" -->
+
+<%= form_for @carticle, :url => "/articles" do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	
+	<%= f.label :body %>
+	<%= f.text_field :body %>
+	
+	<%= f.label :draft %>
+	<%= f.text_field :draft %>
+	
+	<%= f.submit %>
+	
+<% end %>
+
