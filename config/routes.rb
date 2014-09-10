@@ -3,10 +3,6 @@ RailsPortfolio::Application.routes.draw do
   
   get "about" => 'pages#bio', :as => "bio"
   
-  get "https://twitter.com/HappyHourHusker" => 'pages#twitter', :as => "twitter"
-  
-  get "https://www.linkedin.com/in/coreyburkley" => 'pages#linkedin', :as => "linkedin"
-  
   get "classprojects" => 'class_projects#index', :as => "class_project"
   
   get "classprojects/new" => 'class_projects#new', :as => "project_new"

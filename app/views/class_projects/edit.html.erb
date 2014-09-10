@@ -1,4 +1,4 @@
-<h1>Edit User</h1>
+<h1>Edit Project</h1>
 
 <% @existing_project.errors.full_messages.each do |msg| %>
 	<p><%= msg %></p>
@@ -7,7 +7,7 @@
 <!-- Creates a PUT request to "/users/1/edit" -->
 <%#= form_for(@existing_recruit, :as => "user", :url => user_path(@existing_recruit.id), :method => "put") ... %>
 
-<%= form_for @existing_project, :url => "/classprojects/:id" do |f| %>
+<%= form_for @existing_project, :url => "/classprojects/#{@existing_project.id}" do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %>
 	
