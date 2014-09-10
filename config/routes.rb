@@ -1,4 +1,6 @@
 RailsPortfolio::Application.routes.draw do
+  
+  #---------------ClassProject Model----------------#
   get "home" => 'pages#welcome', :as => "welcome"
   
   get "about" => 'pages#bio', :as => "bio"
@@ -12,6 +14,14 @@ RailsPortfolio::Application.routes.draw do
   put "classprojects/:id" => 'class_projects#update' # Notice that the path 'classprojects/:id' is the same as the show route.
   
   get "classprojects/:id" => 'class_projects#show', :as => "project"
+  
+  #--------------Contacts Model----------------------#
+  
+  get "contacts" => 'contacts#index', :as => "contact_list"
+  
+  get "contacts/new" => 'contacts#new', :as => "contact_new"
+  
+  post "contacts" => 'contacts#create'
   
   
 end

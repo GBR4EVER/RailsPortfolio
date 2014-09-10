@@ -4,7 +4,6 @@ class ClassProjectsController < ApplicationController
     @class_projects = ClassProject.all
   end
   
-  binding.pry
   def new
     @class_project = ClassProject.new
   end
@@ -23,7 +22,6 @@ class ClassProjectsController < ApplicationController
     @existing_project = ClassProject.find(params[:id])
   end
   
-  binding.pry
   def update
     @existing_project = ClassProject.find(params[:id])
     

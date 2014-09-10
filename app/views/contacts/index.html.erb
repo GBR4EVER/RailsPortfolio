@@ -1,0 +1,14 @@
+<h1>My Contacts</h1>
+
+<% @contacts.each do |contact| %>
+
+<!-- We could run this tag
+	<! <p><a href="<%#= contact_list_path(contact.id) %>"><%#= contact.name %></a></p> -->
+<!-- But the link_to approach is the much more conventional 'rails way' -->
+
+<p><%= link_to(contact.name, contact_list_path(contact.id)) %></p>
+
+<% end %>
+
+<%= link_to("Create new Contact", contact_new_path) %>
+
