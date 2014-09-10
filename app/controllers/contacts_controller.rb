@@ -8,6 +8,8 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
   
+  binding.pry
+  
   def create
     @contact = Contact.new(params[:contact])
     
@@ -19,7 +21,23 @@ class ContactsController < ApplicationController
   end
   
   def edit
+    @existing_contact = Contact.find(params[:id])
+  end
+  
+  def update
+    @existing_contact = Contact.find(params[:id])
+    
+    if @existing_contact.update_attributes(params[:contact])
+      redirect_to contact_list_path(@existing_contact.id)
+    else
+      render "edit"
+    end
+  end
+  
+  def show
     @contact = Contact.find(params[:id])
   end
   
+  
 end
+
