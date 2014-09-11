@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
     @existing_article = Article.find(params[:id])
     
     if @existing_article.update_attributes(params[:article])
-      redirect_to contact_list_path(@existing_article.id)
+      redirect_to article_list_path(@existing_article.id)
     else
       render "edit"
     end

@@ -6,9 +6,9 @@
 	<! <p><a href="<%#= article_list_path(contact.id) %>"><%#= article.title %></a></p> -->
 <!-- But the link_to approach is the much more conventional 'rails way' -->
 
-<p><%= link_to(article.title, article_list_path(article.id)) %></p>
+<p><%= link_to(article.title, article_path(article.id)) %></p>
 
 <% end %>
 
-<%= link_to("Create new article", contact_new_path) %>
+<%= link_to("Create new article", article_new_path) %>
 

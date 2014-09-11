@@ -32,14 +32,14 @@ RailsPortfolio::Application.routes.draw do
   
   #------------------Article Model--------------------#
   
-  get "articles" => 'article#index', :as => "article_list"
+  get "articles" => 'articles#index', :as => "article_list"
   
-  get "articles/new" => 'article#new', :as => "article_new"
-  get "articles/:id/edit" => 'article#edit', :as => "article_edit"
+  get "articles/new" => 'articles#new', :as => "article_new"
+  get "articles/:id/edit" => 'articles#edit', :as => "article_edit"
   
-  post "articles" => 'article#create'
-  put "articles/:id" => 'article#update'
+  post "articles" => 'articles#create'
+  put "articles/:id" => 'articles#update'
   
-  get "articles/:id" => 'article#show', :as => "article"
+  get "articles/:id" => 'articles#show', :as => "article"
   
 end
