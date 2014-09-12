@@ -6,7 +6,7 @@
 	<! <p><a href="<%#= contact_list_path(contact.id) %>"><%#= contact.name %></a></p> -->
 <!-- But the link_to approach is the much more conventional 'rails way' -->
 
-<p><%= link_to(contact.name, contact_list_path(contact.id)) %></p>
+<p><%= link_to(contact.name, contact_path(contact.id)) %></p>
 
 <% end %>
 

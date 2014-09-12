@@ -20,7 +20,7 @@ RailsPortfolio::Application.routes.draw do
    
   #-----------------Contacts Model-------------------#
   
-  get "contacts" => 'contacts#index', :as => "contact_list"
+  get "contacts" => 'contacts#index', :as => "contacts"
   
   get "contacts/new" => 'contacts#new', :as => "contact_new"
   get "contacts/:id/edit" => 'contact#edit', :as => "contact_edit"
@@ -42,6 +42,7 @@ RailsPortfolio::Application.routes.draw do
   
   get "articles/:id" => 'articles#show', :as => "article"
   delete 'articles/:id/delete' => 'articles#destroy', as: 'article_delete'
+  
   #-------------------Like Model-----------------------#
   
   get "likes" => 'likes#index', as: 'likes'
@@ -54,7 +55,8 @@ RailsPortfolio::Application.routes.draw do
   
   get 'likes/:id' => 'likes#show', as: 'like'
   delete 'likes/:id/delete' => 'likes#destroy', as: 'delete_like'
-
-
+  
+  
+  
 end
 
