@@ -34,7 +34,25 @@ class ArticlesController < ApplicationController
   
   def show
     @article = Article.find(params[:id])
+    @like = Like.new
+    
+    @all_likes = Like.where({article_id: params[:id]})
+    
+    @ip = true
+    
+    @all_likes.each do |a|
+      if a.ip_address == request.remote_ip
+        @ip = false
+      end
+    end
   end
   
+  def destory
+    @article = Article.find(params[:id])
+    @article.destroy
+    
+    redirect_to article_list_path
+  end
   
+      
 end

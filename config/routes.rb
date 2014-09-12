@@ -41,5 +41,20 @@ RailsPortfolio::Application.routes.draw do
   put "articles/:id" => 'articles#update'
   
   get "articles/:id" => 'articles#show', :as => "article"
+  delete 'articles/:id/delete' => 'articles#destroy', as: 'article_delete'
+  #-------------------Like Model-----------------------#
   
+  get "likes" => 'likes#index', as: 'likes'
+  
+  get 'likes/new' => 'likes#new', as: 'new_like'
+  get 'likes/:id/edit' => 'likes#edit', as: 'edit_like'
+  
+  post 'likes' => 'likes#create'
+  put 'likes/:id' => 'likes#update'
+  
+  get 'likes/:id' => 'likes#show', as: 'like'
+  delete 'likes/:id/delete' => 'likes#destroy', as: 'delete_like'
+
+
 end
+
