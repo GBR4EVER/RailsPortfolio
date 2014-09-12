@@ -5,3 +5,12 @@
 <p><%= @class_project.github %></p>
 
 <%= link_to("Edit this project", project_edit_path(@class_project.id)) %>
+
+<p>_________________________________________________________</p>
+
+<ul>
+	<li><%= link_to("Home", welcome_path) %></li>
+	<li><%= link_to("Articles", article_list_path) %></li>
+	<li><%= link_to("Contacts", contacts_path) %></li>
+</ul>
+

@@ -4,3 +4,11 @@
 <p><%= @contact.message %></p>
 
 <%= link_to("Edit this Contact", contact_edit_path(@contact.id)) %>
+
+<p>_________________________________________________________</p>
+
+<ul>
+	<li><%= link_to("Home", welcome_path) %></li>
+	<li><%= link_to("Class Projects", class_project_path) %></li>
+	<li><%= link_to("Articles", article_list_path) %></li>
+</ul>
