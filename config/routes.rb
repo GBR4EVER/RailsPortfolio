@@ -17,7 +17,8 @@ RailsPortfolio::Application.routes.draw do
   put "classprojects/:id" => 'class_projects#update' # Notice that the path 'classprojects/:id' is the same as the show route.
   
   get "classprojects/:id" => 'class_projects#show', :as => "project"
-   
+  delete "classprojects/:id/delete" => 'classprojects#destroy', as: 'project_delete'
+  
   #-----------------Contacts Model-------------------#
   
   get "contacts" => 'contacts#index', :as => "contacts"
@@ -29,6 +30,7 @@ RailsPortfolio::Application.routes.draw do
   put "contacts/:id" => 'contacts#update'
   
   get "contacts/:id" => 'contacts#show', :as => "contact"
+  delete "contacts/:id/delete" => 'contacts#destroy', as: 'contact_delete'
   
   #------------------Article Model--------------------#
   

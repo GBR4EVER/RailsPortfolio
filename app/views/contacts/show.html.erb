@@ -1,3 +1,6 @@
 <h1><%= @contact.name %></h1>
 
+<p><%= @contact.email %></p>
+<p><%= @contact.message %></p>
+
 <%= link_to("Edit this Contact", contact_edit_path(@contact.id)) %>
