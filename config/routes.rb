@@ -65,6 +65,7 @@ RailsPortfolio::Application.routes.draw do
  
   post "create_user" => 'users#create', :as => "user_create"
   get "signup" => 'users#new', :as => "signup"
-  
+
+
 end
 
