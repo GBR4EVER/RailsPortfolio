@@ -58,7 +58,13 @@ RailsPortfolio::Application.routes.draw do
   get 'likes/:id' => 'likes#show', as: 'like'
   delete 'likes/:id/delete' => 'likes#destroy', as: 'delete_like'
   
+  #------------------Login Model-----------------------#
   
+  get "login" => 'logins#new', :as => "login"
+  post "login" => 'logins#create', :as => "login_create"
+ 
+  post "create_user" => 'users#create', :as => "user_create"
+  get "signup" => 'users#new', :as => "signup"
   
 end
 
