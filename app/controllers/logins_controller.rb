@@ -14,5 +14,10 @@ class LoginsController < ApplicationController
       raise "Invalid login."
     end
  end
+ 
+ def destroy
+   session[:user_id] = nil
+   redirect_to article_list_path
+ end
 
 end
